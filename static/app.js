@@ -6,6 +6,7 @@ var app = new Vue({
     loading: false
   },
   mounted: () => {
+    document.getElementById('cover-spin').style.visibility = 'hidden';
     document.getElementById('input-quote').focus();
   },
   methods: {

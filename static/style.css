@@ -7,6 +7,18 @@ html, body{
   font-family: 'Roboto', sans-serif;
 }
 
+#cover-spin {
+  position:fixed;
+  width:100%;
+  left:0;right:0;top:0;bottom:0;
+  background-color: #FFF;
+  z-index:9999;
+
+  background-image: url(./img/loading.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .container{
   display: flex;
   min-height: 100%;
@@ -19,16 +31,6 @@ html, body{
   flex: none;
   width: 80%;
   max-width: 900px;
-}
-
-
-
-.tets {
-  background: #a641e5; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #a641e5 0%, #1b9a95 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  #a641e5 0%,#1b9a95 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  #a641e5 0%,#1b9a95 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a641e5', endColorstr='#1b9a95',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .control-area{
