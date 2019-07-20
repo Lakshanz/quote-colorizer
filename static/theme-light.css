@@ -1,0 +1,22 @@
+body{
+  background-color: #f3f3f3;
+}
+
+.branding h1{
+  background: linear-gradient(to right, #7D9ADB 0%, #2EDE94 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quote-input{
+  border: 4px solid #54C9E5;
+}
+
+.quote-submit-btn{
+  background-color: #47C9AA;
+}
+
+.quote-submit-btn:hover{
+  background-color: #3fb398;
+}

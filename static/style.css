@@ -1,0 +1,249 @@
+html, body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > .page-wrap {
+  -webkit-box-flex: 0;
+  flex: none;
+  width: 80%;
+  max-width: 900px;
+}
+
+
+
+.tets {
+  background: #a641e5; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #a641e5 0%, #1b9a95 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #a641e5 0%,#1b9a95 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #a641e5 0%,#1b9a95 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a641e5', endColorstr='#1b9a95',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.control-area{
+  width: 100%;
+}
+
+.branding{
+  text-align: center;
+}
+
+.branding h1{
+  font-family: 'Poiret One', cursive;
+  margin: 20px 0;
+  font-size: 5em;
+  color: #2EDE94;
+  background: linear-gradient(to right, #FFF 0%, #2EDE94 100%);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.quote-input{
+  display: block;
+  padding: 20px;
+  font-size: 1.5em;
+  background:rgba(255, 255, 255, 0.9);
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.quote-input::placeholder { 
+  color: #dad8d8;
+  opacity: 1; /* Firefox */
+}
+
+.quote-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #dad8d8;
+}
+
+.quote-input:focus{
+  outline: none;
+}
+
+.quote-submit-btn:focus{
+  outline: none;
+}
+
+.btn-wrapper{
+  text-align: center;
+}
+
+.quote-submit-btn{
+  display: inline-block;
+  width: 40%;
+  padding: 20px 40px;
+  background-color: #28A6CB;
+  color: #FFF;
+  text-align: center;
+  border: none;
+  margin: 20px 0;
+  border-radius: 40px;
+  font-size: 1.5em;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.quote-submit-btn:hover{
+  background-color: rgb(32, 154, 191);
+  transition:.3s;
+}
+
+.quote-card{
+  padding: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #6d4298;
+  color: #FFF;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-family: 'Poiret One', cursive;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .branding h1 {
+    font-size: 2em;
+  }
+
+  .quote-input{
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .quote-submit-btn{
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .quote-card{
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  .quote-submit-btn{
+    width: 80%;
+  }
+}
+
+
+/***** Shake animation */
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/**** end shake animation **/
+
+/**** Body background animation **/
+.animated_bg {
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+/*** end bg animation */
+
+/*** Spinner **/
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0px auto;
+  left: 10px;
+  background-color: #FFF;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+/*** end spinner **/

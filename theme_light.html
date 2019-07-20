@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quote Colorizer</title>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/theme-light.css">
+</head>
+
+<body>
+  <div class="container" id="app">
+    <div class="page-wrap">
+      <div class="control-area">
+        <div class="branding">
+          <h1>Quote Colorizer</h1>
+        </div>
+
+        <div>
+          <form action="" method="get" v-on:submit.prevent="addQuote">
+            <div>
+              <input class="quote-input" type="text" id="input-quote" placeholder="Type your quote here :)" v-model="quote" autocomplete="off">
+            </div>
+            <div class="btn-wrapper">
+              <button v-show="!loading" class="quote-submit-btn" type="submit">
+                  Colorize
+              </button>
+              <button v-show="loading" class="quote-submit-btn" type="submit">
+                  <div class="spinner"></div>
+                  Generating...
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div v-for="quote in quotes" class="quote-card" v-bind:style="quote.style">
+        “ {{quote.quote}} ”
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./static/app.js"></script>
+
+</html>
